@@ -8,6 +8,14 @@ class NavigatorMenu extends StatefulWidget {
 }
 
 class _NavigatorMenuState extends State<NavigatorMenu> {
+  List image = [
+    "images/1.jpg",
+    "images/2.jpg",
+    "images/3.jpg",
+    "images/4.jpg",
+    "images/5.jpg",
+    "images/6.jpg",
+  ];
   int i = 2;
   @override
   Widget build(BuildContext context) {
@@ -15,102 +23,107 @@ class _NavigatorMenuState extends State<NavigatorMenu> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("images/Map.jpg"), fit: BoxFit.fill),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   children: [
-              //     Row(
-              //       children: const [
-              //         Icon(
-              //           Icons.compass_calibration,
-              //           color: Colors.amber,
-              //         ),
-              //         Icon(
-              //           Icons.compass_calibration,
-              //           color: Colors.amber,
-              //         ),
-              //       ],
-              //     ),
-              //     Container()
-              //   ],
-              // ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.3,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      Container(
-                          width: 50,
-                          height: 50,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: Colors.white,
-                          ),
-                          child: const Icon(Icons.chat, color: Colors.yellowAccent)),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                          width: 50,
-                          height: 50,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: Colors.white,
-                          ),
-                          child:const Icon(Icons.navigation,
-                              color: Colors.yellowAccent))
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Container(
-                          width: 50,
-                          height: 50,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: Colors.white,
-                          ),
-                          child:const Text(
-                            "+",
-                            style: TextStyle(fontSize: 25),
-                          )),
-                     const  SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                          width: 50,
-                          height: 50,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: Colors.white,
-                          ),
-                          child:const  Text(
-                            "-",
-                            style: TextStyle(fontSize: 25),
-                          ))
-                    ],
-                  )
-                ],
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.3,
-              ),
-            ],
-          ),
+        // decoration: const BoxDecoration(
+        //   image: DecorationImage(
+        //       image: AssetImage("im"), fit: BoxFit.fill),
+        // ),
+        // child: Padding(
+        //   padding: const EdgeInsets.all(8.0),
+        //   child: Column(
+        //     children: [
+        //       // Row(
+        //       //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //       //   children: [
+        //       //     Row(
+        //       //       children: const [
+        //       //         Icon(
+        //       //           Icons.compass_calibration,
+        //       //           color: Colors.amber,
+        //       //         ),
+        //       //         Icon(
+        //       //           Icons.compass_calibration,
+        //       //           color: Colors.amber,
+        //       //         ),
+        //       //       ],
+        //       //     ),
+        //       //     Container()
+        //       //   ],
+        //       // ),
+        //       SizedBox(
+        //         height: MediaQuery.of(context).size.height * 0.3,
+        //       ),
+        //       Row(
+        //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //         children: [
+        //           Column(
+        //             children: [
+        //               Container(
+        //                   width: 50,
+        //                   height: 50,
+        //                   alignment: Alignment.center,
+        //                   decoration: BoxDecoration(
+        //                     borderRadius: BorderRadius.circular(25),
+        //                     color: Colors.white,
+        //                   ),
+        //                   child: const Icon(Icons.chat, color: Colors.yellowAccent)),
+        //               const SizedBox(
+        //                 height: 5,
+        //               ),
+        //               Container(
+        //                   width: 50,
+        //                   height: 50,
+        //                   alignment: Alignment.center,
+        //                   decoration: BoxDecoration(
+        //                     borderRadius: BorderRadius.circular(25),
+        //                     color: Colors.white,
+        //                   ),
+        //                   child:const Icon(Icons.navigation,
+        //                       color: Colors.yellowAccent))
+        //             ],
+        //           ),
+        //           Column(
+        //             children: [
+        //               Container(
+        //                   width: 50,
+        //                   height: 50,
+        //                   alignment: Alignment.center,
+        //                   decoration: BoxDecoration(
+        //                     borderRadius: BorderRadius.circular(25),
+        //                     color: Colors.white,
+        //                   ),
+        //                   child:const Text(
+        //                     "+",
+        //                     style: TextStyle(fontSize: 25),
+        //                   )),
+        //              const  SizedBox(
+        //                 height: 5,
+        //               ),
+        //               Container(
+        //                   width: 50,
+        //                   height: 50,
+        //                   alignment: Alignment.center,
+        //                   decoration: BoxDecoration(
+        //                     borderRadius: BorderRadius.circular(25),
+        //                     color: Colors.white,
+        //                   ),
+        //                   child:const  Text(
+        //                     "-",
+        //                     style: TextStyle(fontSize: 25),
+        //                   ))
+        //             ],
+        //           )
+        //         ],
+        //       ),
+        //       SizedBox(
+        //         height: MediaQuery.of(context).size.height * 0.3,
+        //       ),
+        //     ],
+        //   ),
+        // ),
+        child: Image.asset(
+          image[i],
+          // height: double.infinity,
+          // width: double.infinity,
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
